@@ -1,0 +1,271 @@
+@import url('../../css2');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, textarea {
+  font-family: 'Jua', sans-serif;
+  margin: 0;
+  color: black;
+}
+
+.pc_none {
+  display: none;
+}
+
+.mb_none {
+  display: block;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8a8a8a73;
+  z-index: 1000;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+.loading img {
+  width: 50px;
+  height: 50px;
+  animation: rotate 4s infinite;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto
+}
+
+/* header */
+
+header .header_right button {
+  padding: 0 20px;
+  color: #FFF;  
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ======================== */
+
+.main_banner {
+  position: relative;
+}
+
+.main_banner_img {
+  width: 100%;
+  height: auto;
+}
+
+.sub_banner {
+  position: fixed;
+  top: calc(50vh - 150px);
+  right: 50px;
+  z-index: 100;
+}
+
+.sub_banner > img {
+  width: 196px;
+}
+
+.sub_banner_mb {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.sub_banner_mb img {
+  width: 80px;
+  height: 80px;
+}
+
+.sub_banner_btn_box {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sub_banner_btn_box a {
+  display: inline-block;
+  width: calc(100% - 30px);
+}
+
+.sub_banner_btn_box img {
+  width: 100%;
+  height: auto;
+}
+
+.ss_1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.ss_1_tit {
+  margin: 40px 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.ss_btn {
+  margin: 60px 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.ss_2 {
+  text-align: center;
+}
+
+.ss_2_bg {
+  width: 100%;
+  height: auto;
+}
+
+/* shake */
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes shake2 {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(7deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-7deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.shake_ele {
+  animation: shake 0.3s infinite;
+}
+
+.shake_btn.animate {
+  animation: shake2 0.3s;
+  animation-delay: 0.2s;
+}
+
+/* beat */
+
+@keyframes beat{
+  0% { transform: scale(1); }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.beat_ele {
+  animation: beat 0.7s infinite;
+}
+
+/* ================ */
+
+.ref_btn img {
+  transition: 0.3s;
+}
+
+.ref_btn:hover img {
+  transform: scale(1.05);
+}
+
+.ss_3 {
+  position: relative;
+  margin-top: 90px;
+}
+
+.ss_3 .ss_3_bg {
+  width: 100%;
+  height: auto;
+}
+
+.ss_3 .btn_box {
+  width: 100%;
+  position:absolute;
+  top: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.ss_4 {
+  padding: 0 120px;
+  margin-top: 50px;
+}
+
+.ss_4 .ss_4_bg {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  margin: 60px 0 100px 0;
+}
+
+.footer .footer_bg {
+  width: 100%;
+  height: auto;
+}
+
+
+/* TABLET  + Mobile */
+@media screen and (max-width:1279px){
+  .pc_none {
+    display: block;
+  }
+  
+  .mb_none {
+    display: none;
+  }
+
+  .ss_1_tit {
+    margin: 20px 0;
+    width: 300px;
+  }
+
+  .ss_btn {
+    margin: 30px 0;
+    width: 300px;
+  }
+
+  .ss_3 {
+    margin-top: 40px;
+  }
+
+  .ss_3 .btn_box a img {
+    width: 180px;
+  }
+
+  .ss_4 {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+
+  .footer {
+    margin: 20px 0 85px 0;
+  }
+}
